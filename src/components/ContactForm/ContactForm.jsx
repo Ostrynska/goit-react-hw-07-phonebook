@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import Notiflix from 'notiflix';
-import { useSelector, useDispatch } from 'react-redux';
-import { nanoid } from '@reduxjs/toolkit';
+// import Notiflix from 'notiflix';
+// import {
+//   useSelector,
+//   useDispatch,
+// } from 'react-redux';
+// import { nanoid } from '@reduxjs/toolkit';
 // import { addContacts } from '../../redux/contacts/slice';
 // import { getContacts } from '../../redux/contacts/selectors';
 import {
@@ -17,7 +20,7 @@ export const ContactForm = () => {
   const [number, setNumber] = useState('');
 
   //   const contacts = useSelector(getContacts);
-  const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
