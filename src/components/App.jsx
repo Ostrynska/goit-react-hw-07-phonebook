@@ -44,7 +44,7 @@ export const App = () => {
           Contacts
         </h2>
         <Filter />
-        {isLoading && !error && <b>Request in progress...</b>}
+        {isLoading && !error}
         <ContactList />
       </Box>
     </>
