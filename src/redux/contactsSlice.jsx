@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import Notiflix from 'notiflix';
 import { fetchContacts, addContact, deleteContact } from './operations';
 
 const handlePending = state => {
-  state.isLoading = true;
+  state.isLoading = Notiflix.Loading.standard('Request in progress...');
+  Notiflix.Loading.remove(500);
 };
 
 const handleRejected = (state, action) => {
