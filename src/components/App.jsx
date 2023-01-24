@@ -1,9 +1,22 @@
 import { Box } from './Box';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchContacts } from 'redux/operations';
+import { getError, getIsLoading } from 'redux/selectors';
+
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
-// import Filter from './Filter';
+import Filter from './Filter';
 
 export const App = () => {
+  const dispatch = useDispatch();
+  const isLoading = useSelector(getIsLoading);
+  const error = useSelector(getError);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
   return (
     <>
       <Box fontSize={16} pt="60px" as="section">
@@ -30,7 +43,8 @@ export const App = () => {
         >
           Contacts
         </h2>
-        {/* <Filter /> */}
+        <Filter />
+        {isLoading && !error && <b>Request in progress...</b>}
         <ContactList />
       </Box>
     </>
