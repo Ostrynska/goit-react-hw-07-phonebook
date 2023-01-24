@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 // import { removeContacts } from '../../redux/contacts/slice';
 // import { getContacts, getFilter } from '../../redux/contacts/selectors';
 import {
   ContactsList,
-  ContactsListItem,
-  ContactsListInf,
-  ContactsListButton,
+  //   ContactsListItem,
+  //   ContactsListInf,
+  //   ContactsListButton,
 } from './ContactList.styled';
-import { IoTrashBinOutline } from 'react-icons/io5';
-import { IconContext } from 'react-icons';
-import { MdContactPage } from 'react-icons/md';
+// import { IoTrashBinOutline } from 'react-icons/io5';
+// import { IconContext } from 'react-icons';
+// import { MdContactPage } from 'react-icons/md';
 
 const ContactList = () => {
   const dispatch = useDispatch();
