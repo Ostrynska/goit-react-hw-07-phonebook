@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 // import { removeContacts } from '../../redux/contacts/slice';
 // import { getContacts, getFilter } from '../../redux/contacts/selectors';
 import {
@@ -14,7 +14,7 @@ import {
 // import { MdContactPage } from 'react-icons/md';
 
 const ContactList = () => {
-  const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
   //   const contacts = useSelector(getContacts);
   //   const filter = useSelector(getFilter);
 
